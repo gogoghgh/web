@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/test5.html</title>
+</head>
+<body>
+	<h1>폼(양식)태그</h1>
+	<!-- 	form태그 = 양식 태그 
+	name!!!이 아주 중요한 역할 함~~ 나중에... 꼭 잘 입력하기
+	action = "폼 영역 지정해서 그 안에 있는 모든 영역을 서버에 전달.. 
+	하이퍼링크할 페이지를 적어놓으면 거기다가 전달.."
+	데이터 전달방식: method= "get(비번까지 눈에 보임.. 기본값)/ post(눈에 안 보이게~ 하면서 서버로 넘어감)"
+	-->
+	<form action="test1.html" method="get"> <!-- 하이퍼링크를 저기에 입력~~ -->
+		아이디: <input type="text" name="id"> 
+		<br><br>
+		비밀번호: <input type="password" name="pw"> 
+		<br><br>
+		자기소개: <textarea rows="5" cols="10" name="intro"></textarea> 
+		<br><br>
+		성별: <input type="radio" name="gender" value="남"> 남성
+			<input type="radio" name="gender" value="여" checked> 여성 
+	<!-- name을 똑같이 해야 둘 중에 하나만 선택됨!! 
+	name 다르게 하면 둘 다 선택됨.. 다른 걸로 인식해서 -->
+		<br><br>
+	
+		취미: <input type="checkbox" name="hobby" value="여행" checked> 여행 <!-- checked: 초기값 주는거 -->
+		<input type="checkbox" name="hobby" value="게임"> 게임
+		<input type="checkbox" name="hobby" value="독서"> 독서
+		<br><br>
+		
+		목록상자: <select name="sel">
+					<option value="1"> 목록1 </option>
+					<option value="2"> 목록2 </option>
+					<option value="3" selected> 목록3 </option>
+		 		</select>
+		<br><br>
+		파일 선택: <input type="file" name ="file">
+<!-- 		textarea, file 은 value값 없음!!
+			입력한 값,    선택한 파일을  각각 value값으로 봄		 -->
+		<br><br>
+		히든 태그: <input type="hidden"  name="hi" value="히든값">
+<!-- 		눈에 안 보이게 하면서,, 값 넘길 때... so value값 꼭 들어가야 함 눈에 안보이니까~~ -->
+		<br><br>
+			
+		<input type= "button" value="걍 버튼^^"> -- js나 jquery가 기능 넣어줌..
+		<br><br>
+		<input type="submit" value="회원가입">
+		<p>
+		<!-- 	submit 눌렀을 때 폼 태그에 있는 내용을 전부 다!! 들고 감~~ 
+		서버로 보내준다,,,!! 서버에 전송하겠다!!
+		 =/= 걍 일반 버튼이랑 다름~~ 
+		가장 많이 사용되고 중요한 태그!! submit ★ -->
+		
+		<!-- 정리!!!!!!		
+		submit버튼: 폼태그 안에 있는 데이터를 서버에 전달 
+		폼태그 영역 지정, 
+		method = "get" 모든 하이퍼링크 데이터 전송 방식으로, 주소줄에 '이름=값'으로 전달. 기본 방식;
+		mothod = "post" 데이터를 숨겨서 데이터 전달. 비번 있을 시에는 꼭 post로! 폼태그에서만 쓸 수 있는 방식;
+		action = "test1.html" <- 연결할 페이지 입력. jsp 입력하면 됨~~
+		-->
+		제출하면?! 
+		http://localhost:8088/HtmlProject/html1/test1.html?id=ggg&pw=gg1245&intro=hi%60%7E%7E%7E%0D%0Anice+to+meet+you&gender=%EC%97%AC&hobby=%EC%97%AC%ED%96%89&hobby=%EA%B2%8C%EC%9E%84&sel=1&file=3.jpg&hi=%ED%9E%88%EB%93%A0%EA%B0%92
+		<br>
+		name=value 이런 꼴로 서버로 넘어감 <br>
+		와우~~
+		</p>
+		<input type="reset" value="초기화">
+				
+	</form>
+</body>
+</html>

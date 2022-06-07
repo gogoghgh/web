@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/test4.html</title>
+</head>
+<body>
+	<h2>표 만들기 (2,2)</h2>
+	<table border="1" width="1700" height="900">
+		<!-- 	table row / table data -->
+		<tr>
+			<td><img src="1.jpg"> <br> 1,1</td>
+			<td><img src="2.jpg"> <br> 1,2</td>
+		</tr>
+		<tr>
+			<td><img src="3.jpg"> <br> 2,1</td>
+			<td><img src="4.jpg"> <br> 2,2</td>
+		</tr>
+	</table>
+
+	<!-- 픽셀: 화면을 이루는 빛의 점, 화면 이루는 단위, 
+			해상도: 빛 쏘는 개수가 가로 1920개, 세로 1080개.. 와우 
+			높을수록 선명한 화면 구현 가능-->
+	<h2>5행 4열 표 만들기</h2>
+	<table border="5" width="900" height="500">
+		<!-- 	1 = 빛의 점이 하나다~~ 1픽셀 
+		width=300 << 1920 중 300개 정도의 크기다~~ -->
+		<tr>
+			<td>용도</td>
+			<td>중량</td>
+			<td>개수</td>
+			<td>가격</td>
+		</tr>
+		<tr>
+			<td>선물용</td>
+			<td>3kg</td>
+			<td>11-16과</td>
+			<td>35000원</td>
+		</tr>
+		<tr>
+			<td>선물용</td>
+			<td>5kg</td>
+			<td>18-26과</td>
+			<td>52000원</td>
+		</tr>
+		<tr>
+			<td>가정용</td>
+			<td>3kg</td>
+			<td>11-16과</td>
+			<td>30000원</td>
+		</tr>
+		<tr>
+			<td>가정용</td>
+			<td>5kg</td>
+			<td>18-26과</td>
+			<td>47000원</td>
+		</tr>
+	</table>
+
+	<h2>3,3 표 합치기</h2>
+	<table border="1" width="300" height="300">
+		<tr>
+			<td colspan="3">1,1</td>
+		</tr>
+		<tr>
+			<td rowspan="2">2,1</td>
+			<td>2,2</td>
+			<td>2,3</td>
+		</tr>
+		<tr>
+			<td>3,2</td>
+			<td>3,3</td>
+		</tr>
+	</table>
+
+	<h2>5행 4열 표.. 합치기!!!</h2>
+	<table border="5" width="900" height="500">
+		<tr>
+			<td colspan="4"><b>용도</b> / 중량 / 개수 / 가격</td>
+
+		</tr>
+		<tr>
+			<td rowspan="2">선물용</td>
+			<td>3kg</td>
+			<td>11-16과</td>
+			<td>35000원</td>
+		</tr>
+		<tr>
+			<td>5kg</td>
+			<td>18-26과</td>
+			<td>52000원</td>
+		</tr>
+		<tr>
+			<td rowspan="2">가정용</td>
+			<td>3kg</td>
+			<td>11-16과</td>
+			<td>30000원</td>
+		</tr>
+		<tr>
+			<td>5kg</td>
+			<td>18-26과</td>
+			<td>47000원</td>
+		</tr>
+	</table>
+
+</body>
+</html>
